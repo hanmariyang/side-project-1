@@ -3,11 +3,17 @@ from .models import UserModel
 from django.http import HttpResponse
 from django.contrib.auth import get_user_model
 from django.contrib import auth
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def sign_up_view(request):
     if request.method == 'GET':
-      return render(request,'user/signup.html')
+      user = request.user.is_authenticated
+      if user:
+         return redirect('/')
+      else: 
+         return render(request,'user/signup.html')
+      
     elif request.method == 'POST':
        username = request.POST.get('username', None)
        password = request.POST.get('password', None)
@@ -49,4 +55,13 @@ def log_in_view(request):
        else:
           return redirect('/log-in')
     elif request.method == 'GET':
-       return render(request, 'user/login.html') 
+       user = request.user.is_authenticated
+       if user:
+          return redirect('/')
+       else:
+          return render(request, 'user/login.html') 
+       
+@login_required
+def logout(request):
+    auth.logout(request)
+    return redirect("/")
