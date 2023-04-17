@@ -10,4 +10,8 @@ def home(request):
     
 def review(request):
     if request.method == 'GET':
-        return render(request, 'review/home.html')
+        user = request.user.is_authenticated 
+        if user:
+            return render(request, 'review/home.html')
+        else:
+            return redirect('/log-in')
