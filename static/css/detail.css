@@ -1,0 +1,34 @@
+p {
+    color: #80cee1;
+    font-size: 200%;
+
+
+}
+
+.box {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+
+input {
+    border-radius: 20px;
+    border: white solid 2px;
+    width: 200%;
+    padding: 30px 30px;
+    font-size: 20px;
+    margin-top: 80px;
+
+}
+
+
+input::placeholder {
+
+
+    color: white;
+
+
+    background-color: #80cee1;
+
+}
