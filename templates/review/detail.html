@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% load static %}
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{% static 'css/detail.css' %}">
+<title>It's mine</title>
+
+
+{% block content %}
+<div class="box">
+    <p>아이디</p>
+    <p>별점</p>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3mVh5wMVD8I9phTzcO0GInPw1effuaEd8yA&usqp=CAU"
+        alt="">
+    <p>구매처</p>
+    <p>상품정보</p>
+    <p>키/몸무게</p>
+    <p>후기</p>
+
+    <input type="text" name="" placeholder="댓글">
+</div>
+{% endblock %}
