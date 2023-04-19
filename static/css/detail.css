@@ -12,6 +12,14 @@ p {
     transform: translate(-50%, -50%);
 }
 
+.delete {
+    background-color: white;
+    color: #80cee1;
+    border-radius: 30%;
+    border: solid #80cee1;
+    padding: 0px 20px 0px 20px;
+}
+
 input {
     border-radius: 20px;
     border: white solid 2px;
