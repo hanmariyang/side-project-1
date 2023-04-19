@@ -12,6 +12,6 @@ class ReviewModel(models.Model):
     rating = models.IntegerField(null=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    size = models.CharField(max_length=255, null=False, default='')
+    size = models.CharField(max_length=255, null=True, default='')
     product_info = models.CharField(max_length=255, null=True)
     purchase_info = models.CharField(max_length=255, null=True)
