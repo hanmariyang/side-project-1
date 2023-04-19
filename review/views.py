@@ -28,5 +28,14 @@ def review(request):
         my_review.content = request.POST.get('content','')
         my_review.save()
         return redirect('/detail')
+
+def detail(request):
+    if request.method == 'GET':
+        user = request.user.is_authenticated
+        if user:
+            all_review = ReviewModel.objects.all().order_by('-created_at')
+            return render(request,'review/detail.html', {'detail':all_review})
+        else:
+            return redirect('log-in')
     
         
