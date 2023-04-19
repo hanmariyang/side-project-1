@@ -8,20 +8,12 @@ def home(request):
         return redirect('/review')
     else:
         return redirect('/log-in')
-    
-def review(request):
-    if request.method == 'GET':
-        user = request.user.is_authenticated 
-        if user:
-            return render(request, 'review/home.html')
-        else:
-            return redirect('/log-in')
         
-def detail(request):
+def review(request):
     if request.method == 'GET': # 요청하는 방식이 GET 방식인지 확인하기
         user = request.user.is_authenticated  # 사용자가 로그인이 되어있는지 확인
         if user: #로그인 한 사용자라면
-             return render(request, 'review/detail.html')
+             return render(request, 'review/review.html')
         else: #로그인이 되어 있지 않다면
              return redirect('/log-in')
     elif request.method == 'POST': #요청 방식이 POST 일때
