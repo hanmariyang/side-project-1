@@ -39,3 +39,5 @@ def detail(request):
             return redirect('log-in')
     
         
+def delete_detail(request):
+    pass

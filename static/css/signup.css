@@ -7,22 +7,20 @@
     /*focus 했을때 테두리 나오게 */
     background-color: white;
 }
-
+/* 
 body {
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 14px;
-    background-color: white;
-    ;
     line-height: 1.5em;
     color: #222;
     margin-top: 200px;
 
-}
+} */
 
 p {
     font-size: 750%;
     color: #80cee1;
-
+    margin-bottom: 50px;
 }
 
 a {
@@ -39,6 +37,11 @@ a {
     padding: 0 20px;
     margin-bottom: 20px;
 
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    line-height: 1.5em;
+    color: #222;
+    margin-top: 100px;
 }
 
 .member .logo {
@@ -175,4 +178,11 @@ a {
     .member {
         width: 100%;
     }
+}
+
+.main_logo {
+    width: 200px;
+    display: flex;
+    
+    margin: 0 auto 0 auto;  
 }

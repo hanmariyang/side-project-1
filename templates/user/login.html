@@ -1,5 +1,6 @@
+{% extends 'base.html' %}
 {% load static %}
-
+{% block content %}
 
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,11 +8,11 @@
 <title>It's mine</title>
 <link rel="stylesheet" href="{% static 'css/signup.css' %}">
 
-{% block content %}
+
 <form method="post" action="/log-in/">
     {% csrf_token %}
     <div class="member">
-        <p style="margin-left: 10%;">log in</p>
+        <img class="main_logo" src="/static/logo.png" alt="">
         <!-- 2. 필드 -->
         <div class="field">
             <b>아이디</b>
