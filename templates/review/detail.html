@@ -10,6 +10,12 @@
 
 {% block content %}
 <div class="box">
+    {% if re.user == user %}
+    <div>
+        <a href="/">
+            <button class="delete">삭제</button>
+        </a>
+    </div>
     <p>아이디</p>
     <p>별점</p>
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3mVh5wMVD8I9phTzcO0GInPw1effuaEd8yA&usqp=CAU"
